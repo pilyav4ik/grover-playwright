@@ -13,5 +13,5 @@ test('basic test', async ({ page }) => {
   await loginPage.clickSubmitButton();
 
   const x = await page.locator("//span[@class='sc-1dril4d-8-span sc-7kmshr-15 jbOywk']");
-  await expect(x).toContainText('111Email o contraseña no válidos. Por favor, inténtalo de nuevo.')
+  await expect(x).toContainText('Email o contraseña no válidos. Por favor, inténtalo de nuevo.')
 });
