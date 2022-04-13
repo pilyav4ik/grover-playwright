@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - tests
+
+jobs:
+  e2e-tests:
+    runs-on: windows-latest # or macos-latest, ubuntu-latest
+    environment: cred
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - uses: microsoft/playwright-github-action@v1
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright
+        run:  npx playwright install
+
+      - name: Run tests
+        run: npm run test
