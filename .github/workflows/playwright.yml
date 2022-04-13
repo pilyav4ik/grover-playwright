@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-    - test
+    - tests
 
 jobs:
   e2e-tests:
