@@ -4,12 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test --browser=firefox --reporter=line,allure-playwright",
+    "report": "allure serve"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pilyav4ik/grover-playwright.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pilyav4ik/grover-playwright/issues"
+  },
+  "homepage": "https://github.com/pilyav4ik/grover-playwright#readme",
+  "dependencies": {
+    "@playwright/test": "^1.21.0",
+    "prettier": "^2.6.2"
+  },
   "devDependencies": {
-    "@playwright/test": "^1.20.1"
+    "allure-playwright": "^2.0.0-beta.15"
   }
 }

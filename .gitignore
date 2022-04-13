@@ -91,3 +91,6 @@ Thumbs.db
 test-results/
 playwright-report/
 /package-lock.json
+
+# Allure
+/allure-results
